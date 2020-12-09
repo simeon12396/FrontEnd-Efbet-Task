@@ -1,0 +1,12 @@
+@import "./combine";
+
+html,
+body {
+  font-size: $general-fs;
+  font-family: $general-font;
+}
+
+.App {
+  height: 100vh;
+  @extend .flex-column;
+}

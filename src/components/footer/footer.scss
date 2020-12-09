@@ -1,0 +1,6 @@
+@import "../../scss/extends";
+
+.footer {
+  padding: 1rem;
+  @extend .flex-center;
+}

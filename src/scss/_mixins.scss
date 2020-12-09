@@ -1,0 +1,25 @@
+@import "./variables";
+
+@mixin flex($flex-wrap, $justify-content, $align-items) {
+  display: flex;
+  flex-wrap: $flex-wrap;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin text-gradient($degree, $firstColor, $secondColor) {
+  background-image: linear-gradient($degree, $firstColor, $secondColor);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+@mixin border-radius($radius-degree) {
+  border-radius: $radius-degree;
+  -webkit-border-radius: $radius-degree;
+  -moz-border-radius: $radius-degree;
+  -ms-border-radius: $radius-degree;
+  -o-border-radius: $radius-degree;
+}

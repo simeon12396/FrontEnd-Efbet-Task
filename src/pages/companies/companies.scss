@@ -1,0 +1,29 @@
+@import "../../scss/variables";
+@import "../../scss//mixins";
+
+.companies {
+  width: 100vw;
+
+  & h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  & a {
+    text-align: center;
+    text-decoration: none;
+    display: block;
+  }
+}
+
+.each_company {
+  margin-left: 0.5rem;
+  font-weight: 400;
+  font-size: 1.4rem;
+  transition: all 0.2s linear;
+
+  &:hover {
+    font-weight: bold;
+    cursor: pointer;
+    @include text-gradient(90deg, $blue, $black);
+  }
+}

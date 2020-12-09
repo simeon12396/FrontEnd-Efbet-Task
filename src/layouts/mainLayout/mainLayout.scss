@@ -1,0 +1,6 @@
+@import "../../scss/extends";
+
+.container {
+  flex: 0 1 90%;
+  @extend .flex-center;
+}

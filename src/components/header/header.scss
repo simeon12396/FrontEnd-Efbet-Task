@@ -1,0 +1,21 @@
+@import "../../scss/extends";
+@import "../../scss//variables";
+
+.header {
+  padding: 1rem;
+  @extend .flex;
+  justify-content: flex-end;
+
+  &__li {
+    list-style-type: none;
+    margin-right: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__nav {
+    @extend .flex;
+  }
+}
