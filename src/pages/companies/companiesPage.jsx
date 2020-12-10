@@ -7,7 +7,7 @@ import "./companies.scss";
 const CompaniesPage = () => {
   const [companies, setCompanies] = useState([]);
 
-  const companiesSelector = useSelector(state => state.companies.companies);
+  const companiesSelector = useSelector(state => state.manageStuffReducer.companies);
 
   useEffect(() => {
     setCompanies(companiesSelector);
