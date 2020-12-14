@@ -1,0 +1,18 @@
+@import "../../scss/variables";
+@import "../../scss//mixins";
+
+.company {
+
+  &__project {
+    margin-left: 0.5rem;
+    font-weight: 400;
+    font-size: 1.4rem;
+    transition: all 0.2s linear;
+    color: silver;
+    margin-bottom: .5rem;
+    
+    &:hover {
+      @include text-gradient(90deg, $blue, $black);
+    }
+  }
+}

@@ -1,11 +1,12 @@
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import Loading from "../../components/loading/loading";
+import Loading from "../../components/common/loading/loading";
 import { NavLink } from "react-router-dom";
 import "./companies.scss";
+import Typography from "../../components/common/typography/typography";
 
 const CompaniesPage = () => {
-  const [companies, setCompanies] = useState([]);
+  const [companies, setCompanies] = useState(null);
 
   const companiesSelector = useSelector(state => state.manageStuffReducer.companies);
 
@@ -13,17 +14,17 @@ const CompaniesPage = () => {
     setCompanies(companiesSelector);
   }, []);
 
-  if (companies.length === 0) {
+  if (!companies) {
     return <Loading />;
   }
 
   return (
     <div className="companies">
-      <h1 className="h1">The whole list of companies: </h1>
+      <Typography variant="title">The whole list of companies:</Typography>
       {companies.map(c => (
-        <NavLink to={`/company/${c.id}`}>
-          <span className="h3">Company:</span>
-          <span className="each_company">{c.name}</span>
+        <NavLink to={`/company/${c.id}`} key={c.id} className="companies__nav-link">
+          <Typography variant="primary-text">Company:</Typography>
+          <Typography variant="tertiary-text">{c.name}</Typography>
         </NavLink>
       ))}
     </div>

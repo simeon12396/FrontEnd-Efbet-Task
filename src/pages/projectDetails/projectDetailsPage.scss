@@ -1,0 +1,57 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+@import "../../scss/extends";
+
+.project-details {
+
+    &__preserved-div {
+        @include flex(row, wrap, flex-start, center);
+    }
+
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__input {
+        border: 1px solid silver;
+        border-radius: 10px;
+        padding: .2rem .7rem;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        margin-left: 1rem;
+    }
+
+    &__submit {
+        border: 1px solid silver;
+        border-radius: 10px;
+        padding: .2rem .7rem;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        @include text-gradient(90deg, $blue, $black);
+    }
+
+    &__close-icon {
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__employees-container {
+        @include flex(column, wrap, center, flex-start)
+    }
+
+    &__employee-container {
+        display: flex;
+        align-items: center;
+    }
+}

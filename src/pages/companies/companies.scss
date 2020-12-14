@@ -1,29 +1,14 @@
 @import "../../scss/variables";
-@import "../../scss//mixins";
+@import "../../scss/mixins";
+@import "../../scss/extends";
 
 .companies {
   width: 100vw;
 
-  & h1 {
-    margin-bottom: 0.5rem;
-  }
-
-  & a {
+  &__nav-link {
     text-align: center;
     text-decoration: none;
-    display: block;
+    @extend .flex-center;
   }
 }
 
-.each_company {
-  margin-left: 0.5rem;
-  font-weight: 400;
-  font-size: 1.4rem;
-  transition: all 0.2s linear;
-
-  &:hover {
-    font-weight: bold;
-    cursor: pointer;
-    @include text-gradient(90deg, $blue, $black);
-  }
-}
