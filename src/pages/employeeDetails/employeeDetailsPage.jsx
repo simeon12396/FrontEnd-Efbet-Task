@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Loading from "../../components/loading/loading";
+import Loading from "../../components/common/loading/loading";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Typography from "../../components/common/typography/typography";
